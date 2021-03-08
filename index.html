@@ -22,22 +22,13 @@
 
 <body>
   <div id ="app">
-    <div v-if = "stock == 0">在庫切れ</div>
-    <div v-else>{{price}}円</div>
+    <ul>
+      <li v-for="item in list"> {{item.name}}  {{item.price}}円</li>
+    </ul>
   </div>
   <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
 
-  <script>
-    let app =new Vue({
-      el: "#app",
-      data: {
-        price: 0,
-        stock: 0
-      }
-    });
-    app.price = 1000;
-    app.stock = 5;
-  </script>
+  <script src = "main.js"></script>
 </body>
 
 </html>
